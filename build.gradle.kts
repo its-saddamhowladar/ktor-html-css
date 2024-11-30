@@ -23,6 +23,7 @@ repositories {
 dependencies {
     implementation(libs.ktor.server.html.builder)
     implementation(libs.ktor.server.core)
+    implementation(libs.kotlinwind.css)
     implementation(libs.kotlin.css)
     implementation(libs.ktor.server.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)

@@ -15,12 +15,16 @@ fun Application.configureRouting() {
     }
     install(StatusPages) {
         exception<Throwable> { call, cause ->
-            call.respondText(text = "500: $cause" , status = HttpStatusCode.InternalServerError)
+            call.respondText(text = "500: $cause", status = HttpStatusCode.InternalServerError)
         }
     }
     install(Resources)
     routing {
         // Static plugin. Try to access `/static/index.html`
         staticResources("/static", "static")
+        staticResources("/img", "img")
+
     }
 }
+
+
